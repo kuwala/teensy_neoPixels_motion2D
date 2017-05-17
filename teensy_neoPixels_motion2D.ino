@@ -5,6 +5,7 @@
 
 #include "ledMatrix.h"
 
+// Dope edits
 // NeoPixels
 #define PIN 6
 // #define NUMLEDS 50
@@ -47,7 +48,7 @@ void setup() {
 //  strip.begin();
 //  strip.setBrightness(64);
   //strip.show();
-  
+
 
 }
 LedMatrix ledMatrix = LedMatrix(4,4,PIN);
@@ -56,7 +57,7 @@ LedMatrix ledMatrix = LedMatrix(4,4,PIN);
 //  for(int row = 0; row < 4; row++ ) {
 //      for(int col = 0; col < 4; col++) {
 //        LedMatrix.cells[row][col]
-// 
+//
 //      }
 //    }
 //}
@@ -84,7 +85,7 @@ void loop() {
 //    strip.setPixelColor(i, strip.Color(255,0,255));
 //    strip.show();
 //  }
-  
+
 
   readMotion();
 
@@ -110,7 +111,7 @@ void loop() {
         ledMatrix.setXY(x,y);
     //ledMatrix.randomColorAtXY(x,y);
     ledMatrix.update();
-   
+
     lastTime = millis();
   }
   //  Serial.print("index: ");
@@ -122,9 +123,9 @@ void loop() {
   //  strip.setPixelColor(mapToLedIndex(ledIndex+3), strip.Color(r,g,b));
   //  strip.setPixelColor(mapToLedIndex(ledIndex+4), strip.Color(0,0,0));
   //  strip.show();
-  
+
   ledMatrix.draw();
-  
+
 
 }
 int mapToLedIndex(int num) {
@@ -134,4 +135,3 @@ int mapToLedIndex(int num) {
   }
   return index;
 }
-
